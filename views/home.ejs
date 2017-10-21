@@ -13,4 +13,22 @@
         <h1>WELCOME BACK</h1>
         <p>User Name: <%=name%></p>
         <p>Password: <%=password%></p>
+        <p id="status"> </p>
+
+        <form action="/control_center" method="post">
+            <button type="submit">Go to Control Center</button>
+        </form>
+        
 </body>
+<script>
+    var role = "<%=role%>";
+    if(role=="nor"){
+        document.getElementById("status").innerHTML="You are Normal Member"
+    }
+    if(role=="ad"){
+        document.getElementById("status").innerHTML="You are ADMIN"
+    }
+    if(role=="vip"){
+        document.getElementById("status").innerHTML="You are VIP Member"
+    }
+</script>
